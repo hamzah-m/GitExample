@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BasicInteractions" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3AB-rZ-4Ec">
+                                <rect key="frame" x="16" y="73" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BVJ-Wu-2cx">
+                                <rect key="frame" x="16" y="102" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="lYk-g0-NoF"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpa-yO-FYF">
+                                <rect key="frame" x="110" y="140" width="154" height="30"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tnf-IJ-stL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BVJ-Wu-2cx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0vP-vQ-DVM"/>
+                            <constraint firstItem="BVJ-Wu-2cx" firstAttribute="top" secondItem="3AB-rZ-4Ec" secondAttribute="bottom" constant="8" symbolic="YES" id="6BZ-qc-3p4"/>
+                            <constraint firstItem="3AB-rZ-4Ec" firstAttribute="trailing" secondItem="BVJ-Wu-2cx" secondAttribute="trailing" id="HUW-PV-Zdr"/>
+                            <constraint firstItem="3AB-rZ-4Ec" firstAttribute="leading" secondItem="BVJ-Wu-2cx" secondAttribute="leading" id="P9Q-yi-MXs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bpa-yO-FYF" secondAttribute="bottom" constant="497" id="QEc-m0-WNV"/>
+                            <constraint firstItem="bpa-yO-FYF" firstAttribute="top" secondItem="BVJ-Wu-2cx" secondAttribute="bottom" constant="8" symbolic="YES" id="Ykt-Ma-pfT"/>
+                            <constraint firstItem="bpa-yO-FYF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cKe-X8-0Uk"/>
+                            <constraint firstItem="bpa-yO-FYF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="94" id="eoU-jV-fsi"/>
+                            <constraint firstItem="3AB-rZ-4Ec" firstAttribute="centerX" secondItem="bpa-yO-FYF" secondAttribute="centerX" id="hPP-FR-BL7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="3AB-rZ-4Ec" id="tbe-v8-kEe"/>
+                        <outlet property="textField" destination="BVJ-Wu-2cx" id="Bf0-EV-NGN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
