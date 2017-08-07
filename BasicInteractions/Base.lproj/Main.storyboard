@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -44,10 +44,17 @@
                                     <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tnf-IJ-stL"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iz8-vB-Ilw">
+                                <rect key="frame" x="163" y="178" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switch:" destination="BYZ-38-t0r" eventType="valueChanged" id="iOM-a3-Vgr"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BVJ-Wu-2cx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0vP-vQ-DVM"/>
+                            <constraint firstItem="iz8-vB-Ilw" firstAttribute="top" secondItem="bpa-yO-FYF" secondAttribute="bottom" constant="8" symbolic="YES" id="5yW-IW-MzQ"/>
                             <constraint firstItem="BVJ-Wu-2cx" firstAttribute="top" secondItem="3AB-rZ-4Ec" secondAttribute="bottom" constant="8" symbolic="YES" id="6BZ-qc-3p4"/>
                             <constraint firstItem="3AB-rZ-4Ec" firstAttribute="trailing" secondItem="BVJ-Wu-2cx" secondAttribute="trailing" id="HUW-PV-Zdr"/>
                             <constraint firstItem="3AB-rZ-4Ec" firstAttribute="leading" secondItem="BVJ-Wu-2cx" secondAttribute="leading" id="P9Q-yi-MXs"/>
@@ -56,6 +63,7 @@
                             <constraint firstItem="bpa-yO-FYF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cKe-X8-0Uk"/>
                             <constraint firstItem="bpa-yO-FYF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="94" id="eoU-jV-fsi"/>
                             <constraint firstItem="3AB-rZ-4Ec" firstAttribute="centerX" secondItem="bpa-yO-FYF" secondAttribute="centerX" id="hPP-FR-BL7"/>
+                            <constraint firstItem="iz8-vB-Ilw" firstAttribute="centerX" secondItem="bpa-yO-FYF" secondAttribute="centerX" id="ybE-AN-Tye"/>
                         </constraints>
                     </view>
                     <connections>

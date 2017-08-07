@@ -10,8 +10,10 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
+
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
+    var temp: String = ""
     
     
     
@@ -20,6 +22,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         
     }
+    
+    @IBAction func `switch`(_ sender: UISwitch) {
+        
+        if(sender.isOn){
+            label.text = temp
+        } else{
+            temp = label.text!
+            label.text = ""
+        }
+        
+        
+        
+    }
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
