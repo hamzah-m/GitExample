@@ -14,23 +14,37 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var textField: UITextField!
     var temp: String = ""
     
+    @IBOutlet weak var toggler: UISwitch!
+    
     
     @IBAction func buttonPressed(_ sender: Any) {
-        label.text = "Hello, \(textField.text!)!"
+        
+        temp = textField.text!
+        
+        if(toggler.isOn){
+            label.text = "Hello, \(temp)!"
+            
+        }else {
+            
+            label.text = ""
+            
+        }
+        
         textField.resignFirstResponder()
+        
         
     }
     
-    @IBAction func `switch`(_ sender: UISwitch) {
+    @IBAction func switchChanged(_ sender: UISwitch) {
         
         if(!sender.isOn){
             temp = label.text!
             label.text = ""
         }else {
-           label.text = temp
+            label.text = "Hello, \(temp)"
         }
     }
-    
+   
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
