@@ -10,11 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
-
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var textField: UITextField!
     var temp: String = ""
-    
     
     
     @IBAction func buttonPressed(_ sender: Any) {
@@ -25,17 +23,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func `switch`(_ sender: UISwitch) {
         
-        if(sender.isOn){
-            label.text = temp
-        } else{
+        if(!sender.isOn){
             temp = label.text!
             label.text = ""
+        }else {
+           label.text = temp
         }
-        
-        
-        
     }
-    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
